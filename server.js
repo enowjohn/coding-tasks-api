@@ -23,9 +23,10 @@ const corsOptions = {
   origin: function(origin, callback) {
     const allowedOrigins = [
       'http://localhost:3002',
-      'http://localhost:5173', 
+      'http://localhost:5173',
       'https://taskmaster-app.onrender.com',
-      'https://coding-tasks-api.onrender.com'
+      'https://coding-tasks-api.onrender.com',
+      process.env.FRONT_END_URL,
     ];
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
