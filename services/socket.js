@@ -4,7 +4,7 @@ let io;
 const initializeSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: process.env.FRONTEND_URL || 'http://localhost:3002',
+      origin: process.env.FRONTEND_URL || 'http://localhost:3001',
       methods: ['GET', 'POST']
     }
   });
